@@ -1,0 +1,90 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "bt",
+  "scopeName": "source.bt",
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.bt",
+      "match": "//.*$"
+    },
+    {
+      "name": "comment.block.bt",
+      "begin": "/\\*",
+      "end": "\\*/"
+    },
+    {
+      "name": "keyword.control.bt",
+      "match": "\\b(break|case|catch|continue|debugger|default|delete|do|else|elseif|finally|for|fn|if|in|instanceof|new|return|switch|this|throw|try|typeof|let|void|while|with|class|const|enum|export|extends|import|super|print|println)\\b"
+    },
+    {
+      "name": "keyword.operator.bt",
+      "match": "\\b(and|or|not|instanceof|typeof|new|void|delete|in)\\b"
+    },
+    {
+      "name": "constant.language.bt",
+      "match": "\\b(true|false|null|empty|undefined|NaN|Infinity)\\b"
+    },
+    {
+      "name": "constant.numeric.bt",
+      "match": "\\b(0[xX][0-9a-fA-F]+|\\d+(\\.\\d+)?([eE][+-]?\\d+)?)\\b"
+    },
+    {
+      "name": "string.quoted.single.bt",
+      "begin": "'",
+      "end": "'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.bt",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "string.quoted.double.bt",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.bt",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "constant.regexp.bt",
+      "begin": "/",
+      "end": "/[gimsuy]*",
+      "patterns": [
+        {
+          "name": "constant.character.escape.bt",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "variable.language.bt",
+      "match": "\\b(this|super)\\b"
+    },
+    {
+      "name": "support.function.bt",
+      "match": "\\b(split|substring|charAt|charCodeAt|concat|includes|endsWith|indexOf|lastIndexOf|match|repeat|replace|search|slice|startsWith|toLowerCase|toUpperCase|trim|trimEnd|trimStart|valueOf|include|time_micro|get_type)\\b"
+    },
+    {
+      "name": "support.type.object.bt",
+      "match": "\\b(Array|Date|JSON|Math|Number|Object|String|RegExp|Fn|Boolean|Error|Symbol|Set|Map|WeakSet|WeakMap|ArrayBuffer|DataView|Float32Array|Float64Array|Int8Array|Int16Array|Int32Array|Uint8Array|Uint8ClampedArray|Uint16Array|Uint32Array|BigInt64Array|BigUint64Array)\\b"
+    },
+    {
+      "name": "support.constant.math.bt",
+      "match": "\\b(E|LN10|LN2|LOG10E|LOG2E|PI|SQRT1_2|SQRT2)\\b"
+    },
+    {
+      "name": "support.constant.json.bt",
+      "match": "\\b(stringify|parse)\\b"
+    },
+    {
+      "name": "keyword.other.bt",
+      "match": "\\b(as|async|await|from|get|set|of)\\b"
+    }
+  ],
+  "repository": {}
+}

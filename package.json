@@ -6,7 +6,7 @@
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/bt-code-highlighting"
+    "url": "https://github.com/asxldb/bt-code-highlighting"
   },
   "engines": {
     "vscode": "^1.91.0"
